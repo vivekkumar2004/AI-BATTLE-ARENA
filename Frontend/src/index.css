@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ─── Design Tokens ─────────────────────────────────────────────── */
+:root {
+  --bg-base:          #0d0d1a;
+  --bg-surface:       #12121f;
+  --bg-container:     #1e1e2c;
+  --bg-container-hi:  #292937;
+  --bg-card:          rgba(255,255,255,0.04);
+
+  --primary:          #6c63ff;
+  --primary-glow:     rgba(108,99,255,0.35);
+  --primary-dim:      rgba(108,99,255,0.15);
+  --primary-border:   rgba(108,99,255,0.25);
+
+  --gold:             #f5a623;
+  --gold-glow:        rgba(245,166,35,0.35);
+  --gold-dim:         rgba(245,166,35,0.15);
+  --gold-border:      rgba(245,166,35,0.4);
+
+  --text-primary:     #e3e0f4;
+  --text-secondary:   #c7c4d8;
+  --text-muted:       #918fa1;
+  --outline:          #464555;
+
+  --radius-sm:        8px;
+  --radius-md:        12px;
+  --radius-lg:        20px;
+  --radius-xl:        28px;
+  --radius-full:      9999px;
+
+  --blur-glass:       blur(28px);
+  --blur-heavy:       blur(40px);
+}
+
+/* ─── Reset ─────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--primary-dim); border-radius: var(--radius-full); }
+::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+/* ─── Utility ───────────────────────────────────────────────────── */
+.glass {
+  background: var(--bg-card);
+  backdrop-filter: var(--blur-glass);
+  -webkit-backdrop-filter: var(--blur-glass);
+  border: 1px solid var(--primary-border);
+}
+
+.glass-gold {
+  background: rgba(245,166,35,0.06);
+  backdrop-filter: var(--blur-glass);
+  -webkit-backdrop-filter: var(--blur-glass);
+  border: 1px solid var(--gold-border);
+}
+
+/* ─── Animations ─────────────────────────────────────────────────── */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.08); }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes progressBar {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(400%); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes typingDot {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30%           { transform: translateY(-6px); opacity: 1; }
+}
