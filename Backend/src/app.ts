@@ -15,12 +15,6 @@ app.use(cors({
 
 app.use(express.json())
 
-app.get("/", async(req,res)=>
-{
-      const result = await runGraph("predict the team who will win the ipl 2026 based on current performance")
-      res.json(result)
-
-})
 
 app.post("/invoke", async(req,res)=>
 {
