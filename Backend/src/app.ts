@@ -7,7 +7,9 @@ const app = express()
 
 
 app.use(cors({
-      origin : 'http://localhost:5173',
+      origin : ['http://localhost:5173',
+            "https://incredible-tiramisu-ca86f1.netlify.app/"
+      ],
       methods : ["GET","POST"],
       credentials : true
 

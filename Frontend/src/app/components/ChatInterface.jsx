@@ -61,7 +61,7 @@ export default function ChatInterface() {
 
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:3000/invoke", {
+      const response = await axios.post("https://ai-battle-arena-x6vg.onrender.com/invoke", {
         input: promptText
       });
 
