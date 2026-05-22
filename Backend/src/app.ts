@@ -18,6 +18,10 @@ app.use(cors({
 app.use(express.json())
 
 
+app.get("/", (req, res) => {
+   res.send("Backend is running 🚀")
+})
+
 app.post("/invoke", async(req,res)=>
 {
       const {input} = req.body;
