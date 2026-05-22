@@ -8,7 +8,7 @@ const app = express()
 
 app.use(cors({
       origin : ['http://localhost:5173',
-            "https://ai-battle-arena.netlify.app/"
+            "https://ai-battle-arena.netlify.app"
       ],
       methods : ["GET","POST"],
       credentials : true
