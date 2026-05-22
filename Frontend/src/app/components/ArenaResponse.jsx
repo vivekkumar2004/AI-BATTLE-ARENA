@@ -66,7 +66,7 @@ export default function ArenaResponse({ solution1, solution2, judge }) {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 relative">
         {/* Solution 1 — Neon Cyan Cyber Card */}
-        <div className={`glass-ai1 rounded-2xl p-8 relative overflow-hidden transition-all duration-300 hover:scale-[1.01] hover:shadow-[0_0_50px_rgba(0,212,255,0.25)] flex flex-col ${isWinner1 ? 'border-2 border-cyan-400' : ''}`}>
+        <div className={`glass-ai1 min-w-0 rounded-2xl p-8 relative overflow-hidden transition-all duration-300 hover:scale-[1.01] hover:shadow-[0_0_50px_rgba(0,212,255,0.25)] flex flex-col ${isWinner1 ? 'border-2 border-cyan-400' : ''}`}>
           {/* Top accent badge */}
           <div className="absolute top-0 right-0 overflow-hidden rounded-bl-xl">
             <div className={`text-[10px] uppercase font-bold tracking-widest px-4 py-1.5 ${isWinner1 ? 'bg-cyan-500 text-black' : 'bg-cyan-950 text-cyan-400 border-l border-b border-cyan-500/30'}`}>
@@ -85,7 +85,7 @@ export default function ArenaResponse({ solution1, solution2, judge }) {
         </div>
 
         {/* Solution 2 — Neon Purple Cyber Card */}
-        <div className={`glass-ai2 rounded-2xl p-8 relative overflow-hidden transition-all duration-300 hover:scale-[1.01] hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] flex flex-col ${isWinner2 ? 'border-2 border-fuchsia-500' : ''}`}>
+        <div className={`glass-ai2 min-w-0 rounded-2xl p-8 relative overflow-hidden transition-all duration-300 hover:scale-[1.01] hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] flex flex-col ${isWinner2 ? 'border-2 border-fuchsia-500' : ''}`}>
           {/* Top accent badge */}
           <div className="absolute top-0 right-0 overflow-hidden rounded-bl-xl">
             <div className={`text-[10px] uppercase font-bold tracking-widest px-4 py-1.5 ${isWinner2 ? 'bg-fuchsia-500 text-white' : 'bg-fuchsia-950 text-fuchsia-400 border-l border-b border-fuchsia-500/30'}`}>

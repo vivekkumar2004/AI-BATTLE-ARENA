@@ -137,7 +137,7 @@ export default function ChatInterface() {
       </header>
 
       {/* Main Stream */}
-      <main className="flex-1 overflow-y-auto px-4 md:px-8 py-8 w-full max-w-5xl mx-auto flex flex-col relative z-10">
+      <main className="flex-1 overflow-y-auto overflow-x-hidden px-4 md:px-10 lg:px-16 py-8 w-full flex flex-col relative z-10">
         {messages.length === 0 && !loading ? (
           <div className="flex-1 flex flex-col items-center justify-center text-center max-w-2xl mx-auto animate-fade-in">
             {/* Hologram Circle */}
